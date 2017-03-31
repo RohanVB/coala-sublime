@@ -10,7 +10,7 @@ import time
 from .Utils import log, COALA_KEY
 
 
-class CoalaThread(threading.Thread):
+class coalaThread(threading.Thread):
 
     def __init__(self,
                  view,

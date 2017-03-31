@@ -1,7 +1,7 @@
 import sublime_plugin
 import sublime
 import json
-from .CoalaThread import CoalaThread
+from .coalaThread import coalaThread
 from .Utils import log, COALA_KEY
 
 
@@ -26,9 +26,9 @@ def show_output(view):
     view.add_regions(COALA_KEY, regions, COALA_KEY, "dot", region_flag)
 
 
-class CoalaCommand(sublime_plugin.TextCommand):
+class coalaCommand(sublime_plugin.TextCommand):
     """
-    The CoalaCommand inherits the TextCommand from sublime_plugin and can be
+    The coalaCommand inherits the TextCommand from sublime_plugin and can be
     executed using `view.run_command("coala")` - which executes the `run()`
     function by default.
     """
@@ -37,7 +37,7 @@ class CoalaCommand(sublime_plugin.TextCommand):
         file_name = self.view.file_name()
         log("Trying to run coala on", file_name)
         if file_name:
-            thread = CoalaThread(self.view, show_output)
+            thread = coalaThread(self.view, show_output)
             thread.start()
             self.progress_tracker(thread)
         else:

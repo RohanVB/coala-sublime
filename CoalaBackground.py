@@ -3,7 +3,7 @@ import json
 from .Utils import log, COALA_KEY
 
 
-class CoalaBackground(sublime_plugin.EventListener):
+class coalaBackground(sublime_plugin.EventListener):
 
     def on_selection_modified(self, view):
         """
