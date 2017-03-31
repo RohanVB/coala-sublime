@@ -24,6 +24,12 @@ be opened using the "Preferences - Browse Packages" option
 in sublime-text's command pallete or through the
 "Preferences" > "Browse Packages".
 
+### Usage
+
+To use `coala-sublime`, bring up the `Console`, 
+then simply save the file you'd like to run coala
+on."
+
 AUTHORS
 =======
 
